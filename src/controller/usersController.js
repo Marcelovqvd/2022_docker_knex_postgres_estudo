@@ -1,8 +1,11 @@
-const dabatase = require('../database/index.js')
+const knex = require('knex')
+const knexfile = require('../../knexfile')
+
+const database = knex(knexfile);
 
 module.exports = class UsersController {
   async getAll() {
     const data = await database.select().from('users')
-    return 'data'
+    console.log(data)
   }
 }
