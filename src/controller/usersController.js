@@ -6,6 +6,6 @@ const database = knex(knexfile);
 module.exports = class UsersController {
   async getAll() {
     const data = await database.select().from('users')
-    console.log(data)
+    return data
   }
 }
