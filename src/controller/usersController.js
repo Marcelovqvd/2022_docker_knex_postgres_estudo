@@ -1,7 +1,8 @@
-const dabatase = require('../database')
+const dabatase = require('../database/index.js')
 
 module.exports = class UsersController {
-  getAll() {
-    return 'getAll'
+  async getAll() {
+    const data = await database.select().from('users')
+    return 'data'
   }
 }
