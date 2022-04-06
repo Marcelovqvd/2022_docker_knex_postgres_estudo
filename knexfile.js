@@ -1,6 +1,7 @@
 module.exports = {
   client: "pg",
   connection: {
+      host: "database",
       user: "marcelo",
       password: "123",
       database: "contele_db",
